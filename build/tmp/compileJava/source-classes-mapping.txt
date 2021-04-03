@@ -1,0 +1,2 @@
+com/project/MyStoreApplication.java
+ com.project.MyStoreApplication

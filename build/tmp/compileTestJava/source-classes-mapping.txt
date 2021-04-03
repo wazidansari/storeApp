@@ -1,0 +1,2 @@
+com/store/MyStoreApplicationTest.java
+ com.store.MyStoreApplicationTest
