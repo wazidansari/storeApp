@@ -1,20 +1,30 @@
 import React, {useState} from 'react';
-
-const RegisterForm = () => {
+import {connect} from 'react-redux';
+import {registerUser} from './../redux/actions/authActionCreators.js'
+const RegisterForm = ({dispatchRegisterAction}) => {
 
     const [firstname, setFirstName] = useState('');
     const [lastname, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const handleOnSubmit = (event) => {
+         event.preventDefault();
+         dispatchRegisterAction(firstname,lastname,email,password,
+         ()=> console.log(`Account created successfully`),
+         (message)=> console.log(`Error: ${message}`)
+         )
+    };
+
     return(
        <React.Fragment>
           <h2>New User</h2>
           <h4>Create Account</h4>
           <br />
-          <form novalidate>
+          <form noValidate onSubmit={handleOnSubmit}>
             <div className="form-group">
                <label htmlFor="firstname">First Name</label>
-               <input novalidate id="firstname"
+               <input noValidate id="firstname"
                    type="text"
                    name="firstname"
                    placeholder="First Name"
@@ -24,7 +34,7 @@ const RegisterForm = () => {
             </div>
             <div className="form-group">
                <label htmlFor="lastname">Last Name</label>
-               <input novalidate id="lastname"
+               <input noValidate id="lastname"
                    type="text"
                    name="lastname"
                    placeholder="Last Name"
@@ -34,7 +44,7 @@ const RegisterForm = () => {
             </div>
             <div className="form-group">
              <label htmlFor="email">Email Address</label>
-             <input novalidate id="email"
+             <input noValidate id="email"
                  type="email"
                  name="email"
                  placeholder="Email"
@@ -44,7 +54,7 @@ const RegisterForm = () => {
             </div>
           <div className="form-group">
              <label htmlFor="password">Password</label>
-             <input novalidate id="password"
+             <input noValidate id="password"
                  type="password"
                  name="password"
                  placeholder="Password"
@@ -63,4 +73,8 @@ const RegisterForm = () => {
     );
 };
 
-export default RegisterForm;
+const mapDispatchToProps = dispatch => ({
+    dispatchRegisterAction: (firstname, lastname, email, password, onSuccess, onError) =>
+    dispatch(registerUser({firstname,lastname,email,password}, onSuccess, onError))
+})
+export default connect(null, mapDispatchToProps)(RegisterForm);
