@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.store.MyStoreApplicationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-03T14:31:25" hostname="DESKTOP-LSFVOUU" time="0.025">
-  <properties/>
-  <testcase name="testSomething()" classname="com.store.MyStoreApplicationTest" time="0.025"/>
-  <system-out><![CDATA[Hello World!!
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

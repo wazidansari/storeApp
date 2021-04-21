@@ -4,7 +4,7 @@ export const registerUser = (data, onSuccess, onError) => ({
     type: constants.API,
     payload: {
     method: 'POST',
-    url: '/api/users/register',
+    url: '/users/register',
     data,
     success: (response) => (setUserInfo(response)),
     postProcessSuccess: onSuccess,

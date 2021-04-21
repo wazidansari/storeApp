@@ -10,10 +10,10 @@ const LoginForm = () => {
           <h4>Login here</h4>
           <br />
 
-          <form novalidate>
+          <form noValidate>
               <div className="form-group">
                  <label htmlFor="email">Email Address</label>
-                 <input novalidate id="email"
+                 <input noValidate id="email"
                      type="email"
                      name="email"
                      placeholder="Email"
@@ -23,7 +23,7 @@ const LoginForm = () => {
               </div>
               <div className="form-group">
                  <label htmlFor="password">Password</label>
-                 <input novalidate id="password"
+                 <input noValidate id="password"
                      type="password"
                      name="password"
                      placeholder="Password"
