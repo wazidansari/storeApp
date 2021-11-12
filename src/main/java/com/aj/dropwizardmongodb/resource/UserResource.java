@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Path("/users/register")
+@Path("/api/users/register")
 @Produces(MediaType.APPLICATION_JSON)
 @Api(value = "user", description = "User Resource for performing CRUD operations on user Collection")
 public class UserResource {
@@ -43,8 +43,8 @@ public class UserResource {
         System.out.println(json);
         mongoService.insertOne(collection, new Document(BasicDBObject.parse(json)));
         Map<String, String> response = new HashMap<>();
-        response.put("message", "User Got registered successfully");
-        return Response.ok(response).build();
+        //response.put("message", "User Got registered successfully");
+        return Response.ok(json).build();
     }
 
     @POST

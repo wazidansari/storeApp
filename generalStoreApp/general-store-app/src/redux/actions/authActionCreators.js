@@ -4,15 +4,18 @@ export const registerUser = (data, onSuccess, onError) => ({
     type: constants.API,
     payload: {
     method: 'POST',
-    url: '/users/register',
+    headers: { 'Content-Type': 'application/json' },
+    url: '/api/users/register',
     data,
-    success: (response) => (setUserInfo(response)),
+//    success: (response) => (setUserInfo(response)),
+    success: (response) => response,
     postProcessSuccess: onSuccess,
     postProcessError: onError
     }
 });
 
 const setUserInfo = (data) => {
+    console.log("data is: ", data);
     const parsedToken = JSON.parse(atob(data.token.split('.')[1]));
     const userInfo = {
       userId: parsedToken.id,

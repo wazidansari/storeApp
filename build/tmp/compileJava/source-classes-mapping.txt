@@ -1,2 +1,22 @@
-com/project/MyStoreApplication.java
- com.project.MyStoreApplication
+com/aj/dropwizardmongodb/resource/DropwizardMongoDBHealthCheckResource.java
+ com.aj.dropwizardmongodb.resource.DropwizardMongoDBHealthCheckResource
+com/aj/dropwizardmongodb/MongoManaged.java
+ com.aj.dropwizardmongodb.MongoManaged
+com/aj/dropwizardmongodb/DropwizardMongoDBConfiguration.java
+ com.aj.dropwizardmongodb.DropwizardMongoDBConfiguration
+com/aj/dropwizardmongodb/authenticate/AuthUser.java
+ com.aj.dropwizardmongodb.authenticate.AuthUser
+com/aj/dropwizardmongodb/resource/UserResource.java
+ com.aj.dropwizardmongodb.resource.UserResource
+com/aj/dropwizardmongodb/authenticate/BasicCredentials.java
+ com.aj.dropwizardmongodb.authenticate.BasicCredentials
+com/aj/dropwizardmongodb/authenticate/ExampleAuthorizer.java
+ com.aj.dropwizardmongodb.authenticate.ExampleAuthorizer
+com/aj/dropwizardmongodb/service/MongoService.java
+ com.aj.dropwizardmongodb.service.MongoService
+com/aj/dropwizardmongodb/authenticate/ExampleAuthenticator.java
+ com.aj.dropwizardmongodb.authenticate.ExampleAuthenticator
+com/aj/dropwizardmongodb/domain/User.java
+ com.aj.dropwizardmongodb.domain.User
+com/aj/dropwizardmongodb/DropwizardMongoDBApplication.java
+ com.aj.dropwizardmongodb.DropwizardMongoDBApplication

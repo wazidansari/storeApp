@@ -13,6 +13,7 @@ export const apiMiddleware = ({dispatch, getState}) => next => action => {
    url: BASE_URL + url,
    data: data ? data:null
    }).then((response)=>{
+      console.log("This is why you are looking?", response.data);
       if(success) dispatch(success(response.data));
       if(postProcessSuccess) postProcessSuccess(response.data);
    }).catch(err => {

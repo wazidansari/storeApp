@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import {registerUser} from './../redux/actions/authActionCreators.js'
+import {registerUser} from './../redux/actions/authActionCreators'
 const RegisterForm = ({dispatchRegisterAction}) => {
 
     const [firstname, setFirstName] = useState('');
@@ -9,10 +9,11 @@ const RegisterForm = ({dispatchRegisterAction}) => {
     const [password, setPassword] = useState('');
 
     const handleOnSubmit = (event) => {
+         alert("You account got successfully registered");
          event.preventDefault();
          dispatchRegisterAction(firstname,lastname,email,password,
-         ()=> console.log(`Account created successfully`),
-         (message)=> console.log(`Error: ${message}`)
+         ()=> console.log("Account created successfully"),
+         (message)=> console.log("Error: ",message)
          )
     };
 
@@ -43,8 +44,8 @@ const RegisterForm = ({dispatchRegisterAction}) => {
                    className="form-control" />
             </div>
             <div className="form-group">
-             <label htmlFor="email">Email Address</label>
-             <input noValidate id="email"
+             <label htmlFor="email1">Email Address</label>
+             <input noValidate id="email1"
                  type="email"
                  name="email"
                  placeholder="Email"
@@ -53,8 +54,8 @@ const RegisterForm = ({dispatchRegisterAction}) => {
                  className="form-control" />
             </div>
           <div className="form-group">
-             <label htmlFor="password">Password</label>
-             <input noValidate id="password"
+             <label htmlFor="password1">Password</label>
+             <input noValidate id="password1"
                  type="password"
                  name="password"
                  placeholder="Password"

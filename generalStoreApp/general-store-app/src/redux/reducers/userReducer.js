@@ -8,7 +8,7 @@ const defaultState = {
 }
 
 const userInfo = localStorage.getItem('USER_INFO');
-const INITIAL_STATE = userInfo ? JSON.parse(userInfo):defaultState;
+const INITIAL_STATE = userInfo ? JSON.parse(userInfo) : defaultState;
 
 export default function userReducer(state = INITIAL_STATE, action){
      switch(action.type){
